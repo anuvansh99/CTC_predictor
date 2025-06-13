@@ -19,7 +19,7 @@ document.getElementById('ctcForm').addEventListener('submit', async function(e) 
     resultDiv.innerHTML = '<div class="spinner-border text-info" role="status"><span class="visually-hidden">Loading...</span></div> Predicting...';
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/predict', {
+        const response = await fetch('https://ctc-predictor.onrender.com/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cgpa, branch, gender })
